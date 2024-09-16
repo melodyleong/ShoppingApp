@@ -17,7 +17,7 @@ public class ShoppingApp {
             System.out.print("Choose an option: ");
 
             int userChoice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             if (userChoice == users.length + 1) {
                 running = false;
@@ -29,7 +29,7 @@ public class ShoppingApp {
             }
         }
     }
-    // Manage shopping cart for the selected user
+
     public static void manageCart(User user) {
         boolean managingCart = true;
 
@@ -42,7 +42,7 @@ public class ShoppingApp {
             System.out.println("5. Go Back");
             System.out.print("Choose an option: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -66,7 +66,6 @@ public class ShoppingApp {
         }
     }
 
-    // Add a product to the user's cart
     public static void addProduct(User user) {
         System.out.print("Enter Product ID: ");
         int productId = scanner.nextInt();
@@ -89,7 +88,6 @@ public class ShoppingApp {
         System.out.println("Product added to cart successfully!");
     }
 
-    // Update a product in the cart
     public static void updateProduct(User user) {
         System.out.print("Enter Product ID to update: ");
         int productId = scanner.nextInt();
@@ -108,7 +106,6 @@ public class ShoppingApp {
         }
     }
 
-    // Remove a product from the cart
     public static void removeProduct(User user) {
         System.out.print("Enter Product ID to remove: ");
         int productId = scanner.nextInt();
